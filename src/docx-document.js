@@ -324,7 +324,6 @@ class DocxDocument {
 
     const abstractNumberingFragments = fragment();
     const numberingFragments = fragment();
-
     this.numberingObjects.forEach(({ numberingId, type, properties }) => {
       const abstractNumberingFragment = fragment({ namespaceAlias: { w: namespaces.w } })
         .ele('@w', 'abstractNum')
@@ -368,11 +367,11 @@ class DocxDocument {
           .ele('@w', 'tabs')
           .ele('@w', 'tab')
           .att('@w', 'val', 'num')
-          .att('@w', 'pos', (level + 1) * 720)
+          .att('@w', 'pos', (level + 1) * 360)
           .up()
           .up()
           .ele('@w', 'ind')
-          .att('@w', 'left', (level + 1) * 720)
+          .att('@w', 'left', (level + 1) * 360)
           .att('@w', 'hanging', 360)
           .up()
           .up()
