@@ -185,7 +185,6 @@ const buildUnderline = (type = 'single') =>
 const buildLineBreak = (type = 'textWrapping') =>
   fragment({ namespaceAlias: { w: namespaces.w } })
     .ele('@w', 'br')
-    .att('@w', 'type', type)
     .up();
 
 const buildBorder = (
